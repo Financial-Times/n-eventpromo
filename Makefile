@@ -21,7 +21,7 @@ demo-build:
 	@rm -rf bower_components/n-eventpromo
 	@mkdir bower_components/n-eventpromo
 	@cp -r templates/ bower_components/n-eventpromo/templates/
-	@node-sass demos/src/demo.scss public/main.css --include-path bower_components
+	@node-sass demos/src/demo.scss dist/css/demo.css --include-path bower_components
 	@webpack --config demos/webpack.config.js
 	@$(DONE)
 

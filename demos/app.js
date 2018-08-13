@@ -16,7 +16,7 @@ const app = module.exports = express({
 	withNavigation: false,
 	withAnonMiddleware: false,
 	hasHeadCss: false,
-	viewsDirectory: '/demos',
+	viewsDirectory: '/demos/src',
 	partialsDirectory: process.cwd(),
 	directory: process.cwd(),
 	demo: true,
