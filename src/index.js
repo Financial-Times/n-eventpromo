@@ -1,17 +1,9 @@
-import React from 'react';
-import renderToString from 'preact-render-to-string';
-
-import { h } from '@financial-times/x-engine';
-import { Eventpromo } from '@financial-times/x-eventpromo';
-import { Teaser } from '@financial-times/x-teaser';
-//import {Eventpromo} from "@financial-times/x-eventpromo/src/Eventpromo";
-
+import { renderToString } from 'preact-render-to-string';
+import {Eventpromo} from '@financial-times/x-eventpromo';
 import eventpromoClient from './lib/event-promo-client';
 import mapEventData from './lib/mapEventData';
 import hasValidConcepts from './lib/hasValidConcept';
 import animationToggle from './lib/animation-control';
-
-// import template from '../templates/inarticle_dark.html';
 
 async function eventPromoInit (rootEl) {
 	const promoDataSelector = rootEl.querySelector('.js-event-promo-data');
@@ -35,15 +27,15 @@ async function eventPromoInit (rootEl) {
 		throw new Error('failed to fetch eventpromos');
 	}
 
-	if (! eventpromoClientResponse.hasOwnProperty('eventpromo')
-		|| ! typeof eventpromoClientResponse.eventpromo === 'object'
+	if (!eventpromoClientResponse.hasOwnProperty('eventpromo')
+		|| !typeof eventpromoClientResponse.eventpromo === 'object'
 		|| Object.keys(eventpromoClientResponse.eventpromo) === 0
 	) {
 		throw new Error('no eventpromo match for this event');
 	}
 
 	const mappedEvent = mapEventData(eventpromoClientResponse.eventpromo, showVariant);
-	console.log(mappedEvent);
+
 	const promoElement = Eventpromo(mappedEvent);
 	promoSlotSelector.innerHTML = renderToString(promoElement);
 

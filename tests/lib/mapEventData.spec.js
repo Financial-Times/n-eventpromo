@@ -1,4 +1,3 @@
-
 const anEvent = require('../fixtures/liveEvent.json').eventpromo;
 const imageArrayFixture = require('../fixtures/imagesArray');
 const mapEventData = require('../../src/lib/mapEventData');

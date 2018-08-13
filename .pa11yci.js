@@ -39,6 +39,7 @@ for (const viewport of viewports) {
 			screenCapture: `./pa11y_screenCapture/${path}.png`
 		});
 	}
-};
+}
+;
 
 module.exports = config;

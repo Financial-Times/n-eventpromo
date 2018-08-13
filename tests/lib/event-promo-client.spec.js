@@ -38,7 +38,7 @@ describe('Unit tests: getEventsFromApi()', async () => {
 		});
 
 		test('when response from api cannot be parsed', async () => {
-			const fakeResponse = { status: 200, body: 'invalid json data'};
+			const fakeResponse = {status: 200, body: 'invalid json data'};
 			fetchMock.post(config.apiPath, fakeResponse);
 
 			let hasError = false;

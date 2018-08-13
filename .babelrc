@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "env",
+    "react"
+  ],
+  "plugins": [
+    "transform-runtime"
+  ],
+  "ignore": [
+    "node_modules",
+    "/home/devel/ft/x-dash/components/x-eventpromo/dist"
+  ]
+}

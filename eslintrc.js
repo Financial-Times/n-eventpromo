@@ -45,7 +45,7 @@ const config = {
 	'extends': [],
 	'overrides': [
 		{
-			'files': [ 'test/**/*.js', 'tests/**/*.js' ],
+			'files': ['test/**/*.js', 'tests/**/*.js'],
 			'rules': {
 				'no-only-tests/no-only-tests': 2
 			}
@@ -56,7 +56,7 @@ const config = {
 const packageJson = require('./package.json');
 
 const packageJsonContainsPackage = packageName => {
-	const { dependencies, devDependencies} = packageJson;
+	const {dependencies, devDependencies} = packageJson;
 	return (
 		(dependencies && dependencies[packageName])
 		|| (devDependencies && devDependencies[packageName])

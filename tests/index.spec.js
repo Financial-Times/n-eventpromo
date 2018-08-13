@@ -1,7 +1,7 @@
 const {JSDOM} = require('jsdom');
 const fetchMock = require('fetch-mock');
 const config = require('../src/config');
-const eventPromoInit = require('../src/main');
+const eventPromoInit = require('../src/index');
 
 //fixtures
 const conceptFixture = JSON.stringify(require('./fixtures/conceptFixture.json'));
@@ -18,7 +18,7 @@ describe('Unit tests: main', () => {
 
 	beforeEach(() => {
 		global.FT = {
-			flags : {}
+			flags: {}
 		};
 	});
 

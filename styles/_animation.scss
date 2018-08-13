@@ -1,37 +1,38 @@
 .event-promo-animation {
-	.fade-0 {
-		opacity: 0;
-		z-index: 4;
-		animation: fade 20s 2s infinite;
-	}
-	.fade-1 {
-		opacity: 0;
-		z-index: 3;
-		animation: fade 20s 6s infinite;
-	}
-	.fade-2 {
-		opacity: 1;
-		z-index: 2;
-	}
 
-	.paused {
-		animation-play-state: paused;
+  .fade-0 {
+	opacity: 0;
+	z-index: 1;
+	animation: fade 20s 2s infinite;
+  }
+  .fade-1 {
+	opacity: 0;
+	z-index: 0;
+	animation: fade 20s 6s infinite;
+  }
+  .fade-2 {
+	opacity: 1;
+	z-index: -1;
+  }
+
+  .paused {
+	animation-play-state: paused;
+  }
+  @keyframes fade {
+	0% {
+	  opacity: 0;
+	  transform-origin: bottom left;
+	  transform: scale(1.0);
 	}
-	@keyframes fade {
-		0% {
-			opacity: 0;
-			transform-origin: bottom left;
-			transform: scale(1.0);
-		}
-		25% {
-			opacity: 1;
-		}
-		60% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 0;
-			transform: scale(1.2);
-		}
+	25% {
+	  opacity: 1;
 	}
+	60% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 0;
+	  transform: scale(1.2);
+	}
+  }
 }

@@ -1,10 +1,7 @@
 node_modules/
 bower_components/
 .DS_Store
+.editorconfig
 .eslintrc.js
 /public/
 /dist/
-/pa11y_screenCapture/*
-*.env*
-/.vscode
-/coverage
