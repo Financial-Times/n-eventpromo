@@ -3,10 +3,6 @@
 const {Eventpromo} = require('@financial-times/x-eventpromo');
 const {Teaser} = require('@financial-times/x-teaser');
 
-const xHandlebars = require('@financial-times/x-handlebars');
-const handlebars = require('handlebars');
-handlebars.registerHelper('x', xHandlebars());
-
 const express = require('@financial-times/n-internal-tool');
 const fixtures = require('./conceptFixtures.json');
 const eventFixture = require('./fixtures.json');
@@ -35,12 +31,6 @@ app.use('/assets', express.static('dist'));
 app.use('/dist', express.static('dist'));
 app.use('/demos', express.static('demos/src'));
 
-app.get('/hbs', (req, res) => {
-	res.render('demo', Object.assign({
-		title: 'Test App',
-		fixtures: JSON.stringify(fixtures)
-	}));
-});
 app.get('/test', (req, res) => {
 	const properties = {
 		title: 'express test rendering'

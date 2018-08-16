@@ -1,4 +1,4 @@
-import { renderToString } from 'preact-render-to-string';
+import renderToString from 'preact-render-to-string/jsx';
 import {Eventpromo} from '@financial-times/x-eventpromo';
 import eventpromoClient from './lib/event-promo-client';
 import mapEventData from './lib/mapEventData';
@@ -37,7 +37,9 @@ async function eventPromoInit (rootEl) {
 	const mappedEvent = mapEventData(eventpromoClientResponse.eventpromo, showVariant);
 
 	const promoElement = Eventpromo(mappedEvent);
-	promoSlotSelector.innerHTML = renderToString(promoElement);
+    const stringPromoElement = renderToString(promoElement);
+
+	promoSlotSelector.innerHTML = stringPromoElement;
 
 	animationToggle();
 

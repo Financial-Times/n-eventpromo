@@ -7,34 +7,37 @@ describe('mapEventData()', () => {
 		const subject = mapEventData(anEvent);
 
 		const expectedUrl = new URL(anEvent.eventUrl);
-		const imageArray = [];
+
 		expectedUrl.searchParams.set('segmentId', anEvent.segmentId);
 		expectedUrl.searchParams.set('variant', subject.showVariant);
 
 		expect(subject).toHaveProperty('id', anEvent.id);
-		expect(subject).toHaveProperty('eventTitle', anEvent.title);
-		expect(subject).toHaveProperty('mainImage', encodeURI(anEvent.imageUrl));
-		expect(subject).toHaveProperty('eventUrl', expectedUrl.toString());
-		expect(subject).toHaveProperty('eventDate', '12 June 2018');
-		expect(subject).toHaveProperty('eventLocation', anEvent.location);
+		expect(subject).toHaveProperty('title', anEvent.title);
+		expect(subject).toHaveProperty('image1', imageArrayFixture[0]);
+		expect(subject).toHaveProperty('image2', imageArrayFixture[1]);
+		expect(subject).toHaveProperty('image3', imageArrayFixture[2]);
+		expect(subject).toHaveProperty('link', expectedUrl.toString());
+		expect(subject).toHaveProperty('dates', '12 June 2018');
+		expect(subject).toHaveProperty('location', anEvent.location);
 		expect(subject).toHaveProperty('segmentId', anEvent.segmentId);
-		expect(subject).toHaveProperty('images');
 		expect(subject).toHaveProperty('showVariant', false);
-		expect(subject.images).toEqual(expect.arrayContaining(imageArray));
+		//expect(subject.images).toEqual(expect.arrayContaining(imageArray));
 	});
 
-	//Relelvant to AB test propbably ok to remove amend on conclusion.
+	//Relevant to AB test probably ok to remove amend on conclusion.
 	test('test provides the correct control properties', () => {
 
 		const subject = mapEventData(anEvent);
 		const expectedUrl = new URL(anEvent.eventUrl);
-		const imageArray = [];
+
 		expectedUrl.searchParams.set('segmentId', anEvent.segmentId);
 		expectedUrl.searchParams.set('variant', subject.showVariant);
 
 		expect(subject).toHaveProperty('showVariant', false);
-		expect(subject.images).toEqual(expect.arrayContaining(imageArray));
-	});
+        expect(subject).toHaveProperty('image1', imageArrayFixture[0]);
+        expect(subject).toHaveProperty('image2', imageArrayFixture[1]);
+        expect(subject).toHaveProperty('image3', imageArrayFixture[2]);
+    });
 
 	test('test provides the correct control properties', () => {
 
@@ -44,13 +47,15 @@ describe('mapEventData()', () => {
 		expectedUrl.searchParams.set('variant', subject.showVariant);
 
 		expect(subject).toHaveProperty('showVariant', true);
-		expect(subject.images).toEqual(expect.arrayContaining(imageArrayFixture));
-	});
+        expect(subject).toHaveProperty('image1', imageArrayFixture[0]);
+        expect(subject).toHaveProperty('image2', imageArrayFixture[1]);
+        expect(subject).toHaveProperty('image3', imageArrayFixture[2]);
+    });
 
 	test('test it sets date range if start and end dates differ', () => {
 		anEvent.scheduledEndTime = '2018-06-14T07:00:00.000Z';
 		const subject = mapEventData(anEvent);
 
-		expect(subject).toHaveProperty('eventDate', '12 June - 14 June 2018');
+		expect(subject).toHaveProperty('dates', '12 June - 14 June 2018');
 	});
 });

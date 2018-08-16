@@ -36,14 +36,17 @@
     "babel-preset-react": "^6.24.1",
     "bower": "^1.8.4",
     "chai": "^4.1.2",
+    "cheerio": "^1.0.0-rc.2",
     "css-loader": "^1.0.0",
     "eslint-plugin-react": "^7.10.0",
     "extract-loader": "^2.0.1",
     "fetch-mock": "^6.4.3",
     "file-loader": "^1.1.11",
     "hyperons": "^0.4.1",
+    "jest": "^23.1.0",
     "jsdom": "^11.11.0",
     "mocha": "^5.1.1",
+    "node-sass": "^4.9.3",
     "pa11y-ci": "^2.1.1",
     "postcss-loader": "^3.0.0",
     "preact": "^8.3.0",
@@ -54,9 +57,7 @@
     "sinon": "^5.0.10",
     "sinon-chai": "^3.1.0",
     "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0",
-    "cheerio": "^1.0.0-rc.2",
-    "jest": "^23.1.0"
+    "webpack-cli": "^3.1.0"
   },
   "dependencies": {
     "o-date": "git+https://github.com/Financial-Times/o-date.git#v1.2.2"
@@ -73,6 +74,10 @@
     "react-dom/server": "preact-compat/server"
   },
   "jest": {
-    "transform": {}
+    "transform": {},
+    "moduleNameMapper": {
+      "react": "preact-compat",
+      "react-dom": "preact-compat"
+    }
   }
 }
