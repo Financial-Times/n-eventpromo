@@ -1,8 +1,5 @@
 'use strict';
 
-const {Eventpromo} = require('@financial-times/x-eventpromo');
-const {Teaser} = require('@financial-times/x-teaser');
-
 const express = require('@financial-times/n-internal-tool');
 const fixtures = require('./conceptFixtures.json');
 const eventFixture = require('./fixtures.json');
@@ -31,18 +28,6 @@ app.use('/assets', express.static('dist'));
 app.use('/dist', express.static('dist'));
 app.use('/demos', express.static('demos/src'));
 
-app.get('/test', (req, res) => {
-	const properties = {
-		title: 'express test rendering'
-	};
-	res.send(Eventpromo(properties));
-});
-app.get('/teaser', (req, res) => {
-	const properties = {
-		title: 'express test rendering'
-	};
-	res.send(Teaser(properties));
-});
 app.get('/', (req, res) => {
 	res.send(template({
 		title: 'Test App',

@@ -35,9 +35,8 @@ async function eventPromoInit (rootEl) {
 	}
 
 	const mappedEvent = mapEventData(eventpromoClientResponse.eventpromo, showVariant);
-
 	const promoElement = Eventpromo(mappedEvent);
-    const stringPromoElement = renderToString(promoElement);
+    const stringPromoElement = renderToString(promoElement, {}, {pretty:false});
 
 	promoSlotSelector.innerHTML = stringPromoElement;
 
