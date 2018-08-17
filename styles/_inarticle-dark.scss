@@ -1,213 +1,213 @@
 //inarticle newsletter replacement block
 .event-promo-inarticle {
-max-width: 700px;
-margin-bottom: 50px;
-margin-top: 30px;
-display: flex;
-position: relative;
+  max-width: 700px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  display: flex;
+  position: relative;
 
-@include oGridRespondTo($until: S) {
-flex-direction: column;
-flex-direction: column-reverse;
-padding: 0;
-}
+  @include oGridRespondTo($until: S) {
+    flex-direction: column;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
 
-@include oGridRespondTo($from: L, $until: XL) {
-width: 540px;
-}
+  @include oGridRespondTo($from: L, $until: XL) {
+    width: 540px;
+  }
 }
 
 .event-promo-inarticle__blocks {
-display: flex;
-@include oGridRespondTo($until: S) {
-flex-direction: column;
-}
+  display: flex;
+  @include oGridRespondTo($until: S) {
+    flex-direction: column;
+  }
 }
 
 .event-promo__details {
-background-color: rgba(38, 42, 51, 0.9);
-color: getColor('white');
-z-index: 4;
-padding: $ep-standard-space;
-display: flex;
-flex-flow: column;
-justify-content: space-between;
+  background-color: rgba(38, 42, 51, 0.9);
+  color: getColor('white');
+  z-index: 4;
+  padding: $ep-standard-space;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 
-a:hover {
-color: #c5cbd4;
-}
+  a:hover {
+    color: #c5cbd4;
+  }
 
-@include oGridRespondTo($until: S) {
-max-width: 100%;
-margin-top: -$ep-standard-space*2;
-margin-left: $ep-half-space;
-margin-right: $ep-half-space;
-margin-bottom: 0;
-padding: $ep-standard-space;
-padding-bottom: $ep-half-space -6;
-}
+  @include oGridRespondTo($until: S) {
+    max-width: 100%;
+    margin-top: -$ep-standard-space*2;
+    margin-left: $ep-half-space;
+    margin-right: $ep-half-space;
+    margin-bottom: 0;
+    padding: $ep-standard-space;
+    padding-bottom: $ep-half-space -6;
+  }
 
-@include oGridRespondTo($from: S) {
-flex-basis: 60%;
-min-width: 385px;
-}
+  @include oGridRespondTo($from: S) {
+    flex-basis: 60%;
+    min-width: 385px;
+  }
 
-@include oGridRespondTo(S, M) {
-flex-basis: 75%;
-}
+  @include oGridRespondTo(S, M) {
+    flex-basis: 75%;
+  }
 
-@include oGridRespondTo(L, XL) {
-min-width: 300px;
-}
+  @include oGridRespondTo(L, XL) {
+    min-width: 300px;
+  }
 
 }
 
 .event-promo-inarticle__img-block {
 
-a {
-border-bottom: none;
-position: absolute;
-top: 0;
-right: 0;
-overflow: hidden;
-margin-left: -100px;
-max-height: 213px;
+  a {
+    border-bottom: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    margin-left: -100px;
+    max-height: 213px;
 
-@include oGridRespondTo($until: S) {
-width: 100%;
-}
+    @include oGridRespondTo($until: S) {
+      width: 100%;
+    }
 
-@include oGridRespondTo(L, XL) {
-max-height: 168px;
-}
-}
+    @include oGridRespondTo(L, XL) {
+      max-height: 168px;
+    }
+  }
 
-@include oGridRespondTo($until: S) {
-min-height: 200px;
-}
+  @include oGridRespondTo($until: S) {
+    min-height: 200px;
+  }
 }
 
 .event-promo-inarticle__img {
-position: relative;
-top: 0;
-right: 0;
-width: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
 
-@include oGridRespondTo($from: S) {
-width: 340px;
-//margin-left: -100px;
-z-index: -1;
-}
+  @include oGridRespondTo($from: S) {
+    width: 340px;
+    //margin-left: -100px;
+    z-index: -1;
+  }
 
-@include oGridRespondTo($from: M) {
-width: 380px;
-}
+  @include oGridRespondTo($from: M) {
+    width: 380px;
+  }
 
-@include oGridRespondTo(L, XL) {
-width: 300px;
-}
+  @include oGridRespondTo(L, XL) {
+    width: 300px;
+  }
 }
 
 .event-promo-inarticle__cta {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-between;
-align-items: center;
-margin-top: $ep-standard-space;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $ep-standard-space;
 
-@include oGridRespondTo($until: S) {
+  @include oGridRespondTo($until: S) {
 
-border-top: none;
-padding: 0;
-}
-@include oGridRespondTo($until: S) {
-flex-direction: column;
-}
+    border-top: none;
+    padding: 0;
+  }
+  @include oGridRespondTo($until: S) {
+    flex-direction: column;
+  }
 
-> div {
-padding-top: $ep-standard-space;
-@include oGridRespondTo($until: S) {
-justify-content: center;
-padding-bottom: 0;
-}
-}
+  > div {
+    padding-top: $ep-standard-space;
+    @include oGridRespondTo($until: S) {
+      justify-content: center;
+      padding-bottom: 0;
+    }
+  }
 }
 
 .event-promo-inarticle__btn-block {
-@include oGridRespondTo($until: S) {
-width: 100%;
-}
+  @include oGridRespondTo($until: S) {
+    width: 100%;
+  }
 }
 
 .event-promo-inarticle__btn {
-@include oButtons();
-@include oButtonsTheme(inverse);
-@include oButtonsSize(big); //event btn style overrides
-background-color: rgb(60, 63, 69); // rgb(82,82,87);
+  @include oButtons();
+  @include oButtonsTheme(inverse);
+  @include oButtonsSize(big); //event btn style overrides
+  background-color: rgb(60, 63, 69); // rgb(82,82,87);
 
-@include oGridRespondTo($until: S) {
-width: 100%;
-}
+  @include oGridRespondTo($until: S) {
+    width: 100%;
+  }
 
-@include oGridRespondTo($from: S) {
-@include oTypographySans($scale: 2);
-}
+  @include oGridRespondTo($from: S) {
+    @include oTypographySans($scale: 2);
+  }
 
 }
 
 .event-promo-inarticle__btn:not([disabled]):hover {
-background-color: #565c64;
-//rgba(197, 203, 212, 0.9);
-// #c5cbd4; //rgba(255, 241, 229, 0.1);
+  background-color: #565c64;
+  //rgba(197, 203, 212, 0.9);
+  // #c5cbd4; //rgba(255, 241, 229, 0.1);
 }
 
 .event-promo-inarticle__brand {
-display: flex;
-align-items: center;
-@include oTypographySans($scale: -2);
-span {
-padding-right: $ep-half-space;
-}
-&::after {
-display: inarticle-block;
-background-repeat: no-repeat;
-background-size: contain;
-background-position: 50%;
-background-color: transparent;
-content: ' ';
-width: 60px;
-height: 60px;
-background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/specialisttitle-v1:brand-live-ft-logo?source=n-eventpromo')
-}
-@include oGridRespondTo($until: S) {
-align-self: flex-end;
-}
+  display: flex;
+  align-items: center;
+  @include oTypographySans($scale: -2);
+  span {
+    padding-right: $ep-half-space;
+  }
+  &::after {
+    display: inarticle-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-color: transparent;
+    content: ' ';
+    width: 70px;
+    height: 60px;
+    background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/specialisttitle-v1:brand-live-ft-logo?source=n-eventpromo')
+  }
+  @include oGridRespondTo($until: S) {
+    align-self: flex-end;
+  }
 }
 
 .event-promo-animation {
 
-.event-promo__control {
-cursor: pointer;
-z-index: 2;
-border-radius: 22px;
-height: 44px;
-width: 44px;
-top: 8px;
-right: 8px;
-display: inline-block;
-background-repeat: no-repeat;
-background-size: 70%;
-background-position: center;
-background-color: transparent;
-vertical-align: baseline;
-background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:pause?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=svg);
-position: absolute;
-color: getColor('white');
-background-color: rgba(38, 42, 51, 0.4);;
-}
+  .event-promo__control {
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 22px;
+    height: 44px;
+    width: 44px;
+    top: 8px;
+    right: 8px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    background-color: transparent;
+    vertical-align: baseline;
+    background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:pause?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=svg);
+    position: absolute;
+    color: getColor('white');
+    background-color: rgba(38, 42, 51, 0.4);;
+  }
 
-.event-promo__control--paused {
-background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:play?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=svg);
-}
+  .event-promo__control--paused {
+    background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:play?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=svg);
+  }
 }

@@ -34,8 +34,8 @@ async function eventPromoInit (rootEl) {
 		throw new Error('no eventpromo match for this event');
 	}
 
-	const mappedEvent = mapEventData(eventpromoClientResponse.eventpromo, showVariant);
-	const promoElement = Eventpromo(mappedEvent);
+    const mappedEvent = mapEventData(eventpromoClientResponse.eventpromo, showVariant);
+    const promoElement = Eventpromo(mappedEvent);
     const stringPromoElement = renderToString(promoElement, {}, {pretty:false});
 
 	promoSlotSelector.innerHTML = stringPromoElement;

@@ -12,9 +12,7 @@ module.exports = (theEvent, variant) => {
 	return {
 		dates: setDate(theEvent),
 		id: theEvent.id,
-		image1: images[0],
-		image2: images[1],
-		image3: images[2],
+		images,
 		link: eventUrl.toString(),
 		location: theEvent.location,
 		segmentId: theEvent.segmentId,
