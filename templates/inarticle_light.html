@@ -1,7 +1,7 @@
 <div class="event-promo-inarticle event-promo-animation" data-event-focus="{{eventFocus}}" data-focus-concept="{{id}}">
 	<div class="event-promo-inarticle__blocks">
 		<div class="event-promo__title-block">
-			<a href="{{eventUrl}}" class="event-promo__title" data-trackable="event-promo">{{eventTitle}}</a>
+			<a href="{{eventUrl}}" class="event-promo__title" data-trackable="event-promo {{#if showVariant}}event-promo-variant{{/if}}">{{eventTitle}}</a>
 			<div class="event-promo__meta">
 				<p>{{eventLocation}}</p>
 				<p>{{eventDate}}</p>
@@ -13,14 +13,14 @@
 			{{#if images }}
 			<span class="event-promo__control js-event-promo__control" aria-label="control animation" tabindex="0"></span>
 			{{#each images}}
-			<a href="{{../eventUrl}}" data-trackable="event-promo" class="js-event-promo--animate">
+			<a href="{{../eventUrl}}" data-trackable="event-promo {{#if showVariant}}event-promo-variant{{/if}}" class="js-event-promo--animate">
 				<img class="js-event-promo--animate event-promo-inarticle__img fade-{{@index}}" srcset="https://www.ft.com/__origami/service/image/v2/images/raw/{{this}}?source=next&amp;fit=cover&amp;compression=best&amp;width=340 340w,
 						https://www.ft.com/__origami/service/image/v2/images/raw/{{this}}?source=next&amp;fit=cover&amp;compression=best&amp;width=400 740w"
 				alt="{{eventTitle}}" data-n-image-lazy-load-js role="presentation" sizes="(max-width: 46.24em) 100vw, 45vw">
 			</a>
 			{{/each}}
 			{{else}}
-			<a href="{{eventUrl}}" data-trackable="event-promo">
+			<a href="{{eventUrl}}" data-trackable="event-promo {{#if showVariant}}event-promo-variant{{/if}}">
 				<img class="event-promo-inarticle__img" srcset="https://www.ft.com/__origami/service/image/v2/images/raw/{{mainImage}}?source=next&amp;fit=cover&amp;compression=best&amp;width=340 340w,
 					https://www.ft.com/__origami/service/image/v2/images/raw/{{mainImage}}?source=next&amp;fit=cover&amp;compression=best&amp;width=400 740w"
 				alt="{{eventTitle}}" data-n-image-lazy-load-js role="presentation" sizes="(max-width: 46.24em) 100vw, 45vw">
@@ -36,7 +36,7 @@
 	{{/if}}
 	<div class="event-promo-inarticle__blocks event-promo-inarticle__cta">
 		<div class="event-promo-inarticle__btn-block">
-			<a href="{{eventUrl}}" class="event-promo-inarticle__btn" data-trackable="event-promo">Register now</a>
+			<a href="{{eventUrl}}" class="event-promo-inarticle__btn" data-trackable="event-promo {{#if showVariant}}event-promo-variant{{/if}}">Register now</a>
 		</div>
 		<div class="event-promo-inarticle__brand">
 			<span>Presented by</span>
