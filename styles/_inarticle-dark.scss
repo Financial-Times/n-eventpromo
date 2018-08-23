@@ -188,14 +188,12 @@
 .event-promo-animation {
 
   .event-promo__control {
-    cursor: pointer;
     z-index: 50;
     border-radius: 22px;
     height: 44px;
     width: 44px;
     top: 8px;
     right: 8px;
-    display: inline-block;
     background-repeat: no-repeat;
     background-size: 70%;
     background-position: center;
@@ -204,7 +202,8 @@
     background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:pause?source=o-icons&tint=%23FFFFFF,%23FFFFFF&format=svg);
     position: absolute;
     color: getColor('white');
-    background-color: rgba(38, 42, 51, 0.4);;
+    background-color: rgba(38, 42, 51, 0.4);
+    border: 0 solid;
   }
 
   .event-promo__control--paused {
