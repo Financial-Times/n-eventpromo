@@ -7,6 +7,11 @@ data-focus-concept="{{id}}">
 				<p>{{eventLocation}}</p>
 				<p>{{eventDate}}</p>
 			</div>
+			{{#if showVariant}}
+			<div class="event-promo__strapline">
+				<p>{{strapline}}</p>
+			</div>
+			{{/if}}
 			<div class="event-promo-inarticle__cta">
 				<div class="event-promo-inarticle__btn-block">
 					<a href="{{eventUrl}}" class="event-promo-inarticle__btn" data-trackable="event-promo">Register now</a>

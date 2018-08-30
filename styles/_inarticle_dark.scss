@@ -22,7 +22,7 @@
 	}
 }
 
-.event-promo__meta {
+.event-promo__meta, .event-promo__strapline {
 	@include oTypographySans($scale: 2);
 	font-weight: 300;
 
@@ -33,6 +33,10 @@
 	p {
 		margin: 0;
 	}
+}
+
+.event-promo__strapline {
+	margin-top: 15px;
 }
 
 .event-promo-inarticle {
@@ -150,7 +154,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: $ep-standard-space;
+	margin-top: 15px;
 
 	@include oGridRespondTo($until: S) {
 

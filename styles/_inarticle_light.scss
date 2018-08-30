@@ -135,10 +135,6 @@
 	padding-top: $ep-standard-space;
 	padding-bottom: $ep-standard-space;
 
-	@include oGridRespondTo($from: S) {
-		margin-top: 15px;
-	}
-
 	@include oGridRespondTo($until: S) {
 		margin-bottom: $ep-half-space;
 		margin-top: 0;
@@ -164,6 +160,42 @@
 		}
 	}
 
+}
+
+.event-promo-inarticle__strapline {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: $ep-standard-space;
+	padding-bottom: $ep-standard-space/2;
+
+	@include oGridRespondTo($from: S) {
+		margin-top: 15px;
+	}
+
+	@include oGridRespondTo($until: S) {
+		//margin-bottom: $ep-half-space;
+		margin-top: 0;
+		margin-right: $ep-half-space;
+		margin-left: $ep-half-space;
+		flex-direction: column;
+		border: 1px solid getColor('black-70');
+		border-top: none;
+		border-bottom:none;
+		padding: 5px $ep-standard-space 0 $ep-standard-space;
+	}
+
+	@include oGridRespondTo(L, XL) {
+		margin-top: 0;
+	}
+
+	> div {
+		@include oGridRespondTo($until: S) {
+			justify-content: center;
+			margin-top: $ep-standard-space;
+		}
+	}
 }
 
 .event-promo-inarticle__btn-block {

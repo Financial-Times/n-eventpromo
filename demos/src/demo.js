@@ -6,7 +6,7 @@ const demoVersion = document.location.search ? document.location.search.trim().s
 if(!window.FT) {
 	window.FT = {
 			flags :  {
-				eventPromoLightVsDark: demoVersion
+				eventPromoLightVsLightSL : demoVersion
 		}
 	};
 }

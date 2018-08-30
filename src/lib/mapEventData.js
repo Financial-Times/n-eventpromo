@@ -18,6 +18,7 @@ module.exports = (theEvent, variant) => {
 		segmentId: theEvent.segmentId,
 		eventLocation: theEvent.location,
 		images,
-		showVariant
+		showVariant,
+		strapline: theEvent.strapline
 	};
 };
