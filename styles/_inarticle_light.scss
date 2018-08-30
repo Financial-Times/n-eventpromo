@@ -135,10 +135,6 @@
 	padding-top: $ep-standard-space;
 	padding-bottom: $ep-standard-space;
 
-	@include oGridRespondTo($from: S) {
-		margin-top: 15px;
-	}
-
 	@include oGridRespondTo($until: S) {
 		margin-bottom: $ep-half-space;
 		margin-top: 0;
@@ -172,7 +168,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding-top: $ep-standard-space;
-	padding-bottom: $ep-standard-space;
+	padding-bottom: $ep-standard-space/2;
 
 	@include oGridRespondTo($from: S) {
 		margin-top: 15px;
