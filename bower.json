@@ -3,7 +3,7 @@
   "description": "Shared configuration and templates for ft live event promotions on ft.com",
   "main": [
     "main.js",
-    "main.scss"
+    "main.css"
   ],
   "authors": [
     "Tye",
@@ -19,6 +19,5 @@
     "tests"
   ],
   "devDependencies": {
-    "n-ui-foundations": "^3.0.1"
   }
 }

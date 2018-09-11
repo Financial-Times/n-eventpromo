@@ -26,7 +26,6 @@
     "@financial-times/n-gage": "^2.0.1",
     "@financial-times/n-internal-tool": "^2.2.4",
     "@financial-times/x-engine": "file:../x-dash/packages/x-engine",
-    "@financial-times/x-eventpromo": "file:../x-dash/components/x-eventpromo",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.2",
     "babel-loader": "^7.1.5",
@@ -54,7 +53,8 @@
     "webpack-cli": "^3.1.0"
   },
   "dependencies": {
-    "o-date": "git+https://github.com/Financial-Times/o-date.git#v1.2.2"
+    "o-date": "git+https://github.com/Financial-Times/o-date.git#v1.2.2",
+    "@financial-times/x-eventpromo": "file:../x-dash/components/x-eventpromo"
   },
   "x-dash": {
     "engine": {

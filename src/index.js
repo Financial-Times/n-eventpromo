@@ -3,7 +3,7 @@ import {Eventpromo} from '@financial-times/x-eventpromo';
 import eventpromoClient from './lib/event-promo-client';
 import mapEventData from './lib/mapEventData';
 import hasValidConcepts from './lib/hasValidConcept';
-import animationToggle from './lib/animation-control';
+//import animationToggle from './lib/animation-control';
 
 async function eventPromoInit (rootEl) {
 	const promoDataSelector = rootEl.querySelector('.js-event-promo-data');
@@ -40,7 +40,7 @@ async function eventPromoInit (rootEl) {
 
 	promoSlotSelector.innerHTML = stringPromoElement;
 
-	animationToggle();
+	// animationToggle();
 
 	return true;
 }

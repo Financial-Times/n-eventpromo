@@ -4,8 +4,7 @@ const xEngine = require('@financial-times/x-engine/src/webpack');
 module.exports = {
 	entry: {
 		demo: [
-			'./demos/src/demo.js',
-			'./demos/src/demo.scss'
+			'./demos/src/demo.js'
 		],
 		main: [
 			'./src/index.js'
@@ -48,7 +47,10 @@ module.exports = {
 						loader: 'sass-loader',
 						options: {
 							'includePaths': [
-								'node_modules', 'bower_components', 'src', '.'
+								'node_modules',
+								'bower_components',
+								'src',
+								'.'
 							]
 						}
 					}
