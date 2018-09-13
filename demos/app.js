@@ -24,9 +24,7 @@ const app = module.exports = express({
 	s3o: false
 });
 
-app.use('/assets', express.static('dist'));
 app.use('/dist', express.static('dist'));
-app.use('/demos', express.static('demos/src'));
 
 app.get('/', (req, res) => {
 	res.send(template({
@@ -34,6 +32,7 @@ app.get('/', (req, res) => {
 		fixtures: JSON.stringify(fixtures)
 	}));
 });
+
 //Mock api request
 app.post('/eventpromo/api/', (req, res) => {
 	res.send(eventFixture);

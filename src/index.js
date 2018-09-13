@@ -1,9 +1,9 @@
-import renderToString from 'preact-render-to-string/jsx';
+import React from 'react';
+import xEngine from '@financial-times/x-engine';
 import {Eventpromo} from '@financial-times/x-eventpromo';
 import eventpromoClient from './lib/event-promo-client';
 import mapEventData from './lib/mapEventData';
 import hasValidConcepts from './lib/hasValidConcept';
-//import animationToggle from './lib/animation-control';
 
 async function eventPromoInit (rootEl) {
 	const promoDataSelector = rootEl.querySelector('.js-event-promo-data');
@@ -29,18 +29,16 @@ async function eventPromoInit (rootEl) {
 
 	if (!eventpromoClientResponse.hasOwnProperty('eventpromo')
 		|| !typeof eventpromoClientResponse.eventpromo === 'object'
-		|| Object.keys(eventpromoClientResponse.eventpromo) === 0
+		|| Object.keys(eventpromoClientResponse.eventpromo) === []
 	) {
 		throw new Error('no eventpromo match for this event');
 	}
 
     const mappedEvent = mapEventData(eventpromoClientResponse.eventpromo, showVariant);
-    const promoElement = Eventpromo(mappedEvent);
-    const stringPromoElement = renderToString(promoElement, {}, {pretty:false});
 
-	promoSlotSelector.innerHTML = stringPromoElement;
-
-	// animationToggle();
+    xEngine.render(
+        <Eventpromo isPaused="true" {...mappedEvent} />, promoSlotSelector
+    );
 
 	return true;
 }
