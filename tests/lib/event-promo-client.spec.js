@@ -53,12 +53,12 @@ describe('Unit tests: getEventsFromApi()', async () => {
 	});
 });
 
-describe('Unit tests: getReaderHistoryEventsFromApi()', async () => {
+describe('Unit tests: readerHistoryEventsFromApi()', async () => {
 	test('should get events on success', async () => {
 		const uuid = '0000000';
 		const fakeResponse = { status: 200, body: 'an event'};
 		fetchMock.post(config.apiPath, fakeResponse);
-		const subject = await eventpromoClient.getReaderHistoryEventsFromApi(uuid);
+		const subject = await eventpromoClient.readerHistoryEventsFromApi(uuid);
 		expect(subject).toEqual(fakeResponse);
 	});
 });
