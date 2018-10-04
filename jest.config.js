@@ -8,5 +8,9 @@ module.exports = {
         '/bower_components/'
     ],
 	//testEnvironment: 'node',
-	testURL: 'http://localhost/'
+	testURL: 'http://localhost/',
+    moduleNameMapper: {
+        react: 'preact-compat',
+        'react-dom': 'preact-compat'
+    }
 };
