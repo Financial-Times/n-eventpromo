@@ -1,6 +1,6 @@
 const fetchMock = require('fetch-mock');
 const config = require('../../src/config');
-const eventpromoClient = require('../../src/lib/event-promo-client');
+const {getEventsFromApi} = require('../../src/lib/event-promo-client');
 const concepts = require('../fixtures/conceptFixture');
 const liveEvent = require('../fixtures/liveEvent');
 
@@ -11,13 +11,13 @@ afterEach(() => {
 describe('Unit tests: getEventsFromApi()', async () => {
 	test('should get events on success', async () => {
 		fetchMock.post(config.apiPath, liveEvent);
-		const subject = await eventpromoClient.getEventsFromApi(concepts);
+		const subject = await getEventsFromApi(concepts);
 		expect(subject).toEqual(liveEvent);
 	});
 
 	test('should get events on success when called with no concepts', async () => {
 		fetchMock.post(config.apiPath, liveEvent);
-		const subject = await eventpromoClient.getEventsFromApi();
+		const subject = await getEventsFromApi();
 		expect(subject).toEqual(liveEvent);
 	});
 
@@ -29,7 +29,7 @@ describe('Unit tests: getEventsFromApi()', async () => {
 
 			let hasError = false;
 			try {
-				await eventpromoClient.getEventsFromApi(concepts);
+				await getEventsFromApi(concepts);
 			} catch (e) {
 				hasError = true;
 				expect(e.message).toEqual('failed to fetch eventpromos from enventpromo-api');
@@ -43,7 +43,7 @@ describe('Unit tests: getEventsFromApi()', async () => {
 
 			let hasError = false;
 			try {
-				await eventpromoClient.getEventsFromApi(concepts);
+				await getEventsFromApi(concepts);
 			} catch (e) {
 				hasError = true;
 				expect(e.message).toMatch('failed to parse response from enventpromo-api');

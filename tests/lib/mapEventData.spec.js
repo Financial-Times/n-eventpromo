@@ -1,10 +1,10 @@
 const anEvent = require('../fixtures/liveEvent.json').eventpromo;
 const imageArrayFixture = require('../fixtures/imagesArray');
-const mapEventData = require('../../src/lib/mapEventData');
+const {getMappedData} = require('../../src/lib/mapEventData');
 
 describe('mapEventData()', () => {
 	test('test it extract teaser details from eventpayload', () => {
-		const subject = mapEventData(anEvent);
+		const subject = getMappedData(anEvent);
 
 		const expectedUrl = new URL(anEvent.eventUrl);
 
@@ -27,7 +27,7 @@ describe('mapEventData()', () => {
 	//Relevant to AB test probably ok to remove amend on conclusion.
 	test('test provides the correct control properties', () => {
 
-		const subject = mapEventData(anEvent);
+		const subject = getMappedData(anEvent);
 		const expectedUrl = new URL(anEvent.eventUrl);
 
 		expectedUrl.searchParams.set('segmentId', anEvent.segmentId);
@@ -39,7 +39,7 @@ describe('mapEventData()', () => {
 
 	test('test provides the correct control properties', () => {
 
-		const subject = mapEventData(anEvent, 'variant');
+		const subject = getMappedData(anEvent, 'variant');
 		const expectedUrl = new URL(anEvent.eventUrl);
 		expectedUrl.searchParams.set('segmentId', anEvent.segmentId);
 		expectedUrl.searchParams.set('variant', subject.showVariant);
@@ -50,7 +50,7 @@ describe('mapEventData()', () => {
 
 	test('test it sets date range if start and end dates differ', () => {
 		anEvent.scheduledEndTime = '2018-06-14T07:00:00.000Z';
-		const subject = mapEventData(anEvent);
+		const subject = getMappedData(anEvent);
 
 		expect(subject).toHaveProperty('dates', '12 June - 14 June 2018');
 	});
