@@ -1,10 +1,34 @@
 {
   "presets": [
-    "env",
-    "react"
+    ["env", {
+      "modules": false,
+      "exclude": [
+        "transform-regenerator",
+        "transform-async-to-generator"
+      ]
+    }]
   ],
   "plugins": [
-    "transform-runtime"
+    "transform-runtime",
+    ["babel-plugin-transform-react-jsx", {
+      "pragma": "h",
+      "useBuiltIns": true
+    }],
+    ["babel-plugin-transform-object-rest-spread", {
+      "useBuiltIns": true
+    }],
+    ["fast-async", {
+      "compiler": {
+        "noRuntime": true
+      }
+    }],
+    ["module-resolver", {
+      "root": ["."],
+      "alias": {
+        "react": "preact-compat",
+        "react-dom": "preact-compat"
+      }
+    }]
   ],
   "ignore": [
     "node_modules"

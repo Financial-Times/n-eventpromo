@@ -1,7 +1,7 @@
 const config = require('../config');
 const setDate = require('./event-date');
 
-module.exports = (theEvent, variant) => {
+function getMappedData (theEvent, variant) {
 	const eventUrl = new URL(theEvent.eventUrl);
 	const images = [theEvent.imageUrl, ...config.animationStaticImages];
 	const showVariant = (variant === 'variant');
@@ -20,4 +20,8 @@ module.exports = (theEvent, variant) => {
 		strapline: theEvent.strapline,
 		title: theEvent.title
 	};
+};
+
+module.exports = {
+	getMappedData
 };

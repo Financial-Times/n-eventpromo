@@ -1,9 +1,9 @@
 import React from 'react';
-import xEngine from '@financial-times/x-engine';
+import ReactDOM from 'react-dom';
 import {Eventpromo} from '@financial-times/x-eventpromo';
-import eventpromoClient from './lib/event-promo-client';
-import mapEventData from './lib/mapEventData';
-import hasValidConcepts from './lib/hasValidConcept';
+import {getEventsFromApi} from './lib/event-promo-client';
+import {getMappedData} from './lib/mapEventData';
+import {hasValidConcept} from './lib/hasValidConcept';
 
 async function eventPromoInit (rootEl) {
 	const promoDataSelector = rootEl.querySelector('.js-event-promo-data');
@@ -15,13 +15,13 @@ async function eventPromoInit (rootEl) {
 	}
 
 	const concepts = JSON.parse(promoDataSelector.innerHTML);
-	if (!concepts || !hasValidConcepts(concepts)) {
+	if (!concepts || !hasValidConcept(concepts)) {
 		throw new Error('no valid concept ids for eventpromo');
 	}
 
 	let eventpromoClientResponse;
 	try {
-		eventpromoClientResponse = await eventpromoClient.getEventsFromApi(concepts);
+		eventpromoClientResponse = await getEventsFromApi(concepts);
 	}
 	catch (err) {
 		throw new Error('failed to fetch eventpromos');
@@ -34,13 +34,14 @@ async function eventPromoInit (rootEl) {
 		throw new Error('no eventpromo match for this event');
 	}
 
-    const mappedEvent = mapEventData(eventpromoClientResponse.eventpromo, showVariant);
+    const mappedEvent = getMappedData(eventpromoClientResponse.eventpromo, showVariant);
 
-    xEngine.render(
-        <Eventpromo isPaused="true" {...mappedEvent} />, promoSlotSelector
-    );
+	const promoElement = <Eventpromo isPaused="true" {...mappedEvent} />;
+    ReactDOM.render(promoElement, promoSlotSelector);
 
 	return true;
 }
 
-module.exports = eventPromoInit;
+export {
+	eventPromoInit
+};

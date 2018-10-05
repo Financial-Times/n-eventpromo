@@ -28,26 +28,23 @@
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.2",
     "babel-loader": "^7.1.5",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "bower": "^1.8.4",
     "cheerio": "^1.0.0-rc.2",
-    "css-loader": "^1.0.0",
-    "eslint-plugin-react": "^7.10.0",
-    "extract-loader": "^2.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "fast-async": "^6.3.8",
     "fetch-mock": "^6.4.3",
     "file-loader": "^1.1.11",
     "jest": "^23.1.0",
     "jsdom": "^11.11.0",
-    "node-sass": "^4.9.3",
     "pa11y-ci": "^2.1.1",
-    "postcss-loader": "^3.0.0",
     "preact": "^8.3.0",
     "preact-compat": "^3.18.2",
-    "preact-render-to-string": "^3.8.0",
-    "regenerator-runtime": "^0.12.1",
-    "sass-loader": "^7.1.0",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0"
   },
@@ -61,9 +58,5 @@
       "server": "preact",
       "browser": "preact"
     }
-  },
-  "alias": {
-    "^react$": "preact-compat",
-    "react-dom$": "preact-compat"
   }
 }

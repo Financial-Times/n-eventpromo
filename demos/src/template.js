@@ -14,7 +14,7 @@ const template = function ({title, fixtures}) {
 			<div class="o-grid-container">
 				<h1>Demo of n-eventpromo</h1>
 				<div class="o-grid-row demo-context__inarticle" data-o-grid-colspan="12">
-					<span>in article 'event teaser' demo:</span>
+					<span>in article 'eventpromo' demo:</span>
 					<script class="js-event-promo-data" type="application/json">${fixtures}</script>
 					<div class="event-promo js-event-promo"></div>
 				</div>

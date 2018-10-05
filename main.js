@@ -1,3 +1,3 @@
 module.exports = {
-	promoInit: require('./src/main')
+	promoInit: require('./src/index')
 };

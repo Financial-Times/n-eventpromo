@@ -1,4 +1,4 @@
-module.exports = (concepts) => {
+function hasValidConcept (concepts) {
 	const validKeys = ['focus', 'speakers'];
 	const conceptIds = concepts.conceptIds;
 
@@ -11,4 +11,8 @@ module.exports = (concepts) => {
 	}
 
 	return false;
+};
+
+module.exports = {
+    hasValidConcept
 };
