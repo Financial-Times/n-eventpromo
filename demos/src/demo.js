@@ -20,7 +20,7 @@ async function init () {
 		await eventPromoInit(document);
 	}
 	catch (err) {
-		throw new Error('failed to initialise eventpromo');
+		throw new Error(`failed to initialise eventpromo, ${err.toString()}`);
 	}
 }
 

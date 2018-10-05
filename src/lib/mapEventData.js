@@ -1,5 +1,5 @@
 const config = require('../config');
-const setDate = require('./event-date');
+const {getFormattedDate} = require('./event-date');
 
 function getMappedData (theEvent, variant) {
 	const eventUrl = new URL(theEvent.eventUrl);
@@ -10,7 +10,7 @@ function getMappedData (theEvent, variant) {
 	eventUrl.searchParams.set('variant', showVariant.toString());
 
 	return {
-		dates: setDate(theEvent),
+		dates: getFormattedDate(theEvent),
 		id: theEvent.id,
 		images,
 		link: eventUrl.toString(),
