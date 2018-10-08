@@ -17,7 +17,7 @@ test-debug:
 	jest tests --coverage --debug
 
 demo-build:
-	@webpack --config webpack.config.js ---mode development
+	@webpack --config webpack.config.js --env development --mode development
 	@$(DONE)
 
 demo: demo-build
