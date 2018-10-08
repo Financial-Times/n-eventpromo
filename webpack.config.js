@@ -1,22 +1,19 @@
 const path = require('path');
+//const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const xEngine = require('@financial-times/x-engine/src/webpack');
 
 const webpackConfig = (env) => {
     const commonConfig = {
         entry: {
-            demo: [
-                './demos/src/demo.js'
-            ],
-                main: [
-                './src/index.js'
-            ]
+            main: './src/index.js',
+            styles: './node_modules/@financial-times/x-eventpromo/dist/Eventpromo.css'
         },
         resolve: {
             extensions: ['*', '.js', '.jsx']
         },
         output: {
             path: path.resolve(__dirname, 'dist'),
-                filename: '[name].js'
+            filename: '[name].js'
         },
         module: {
             rules: [
@@ -27,22 +24,43 @@ const webpackConfig = (env) => {
                         loader: 'babel-loader'
                     }
                 },
+                {
+                    test: /\.(css)$/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                name: 'n-eventpromo.css',
+                                outputPath: 'css/'
+                            }
+                        },
+                    ]
+                },
             ]
         },
         plugins: [
             xEngine()
         ]
     };
+
+    const devConfig = {
+        entry: {
+            ...commonConfig.entry,
+            ...{demo: './demos/src/demo.js'}
+        }
+    };
+
+    const prodConfig = {
+        externals: {
+            'o-date': 'oDate',
+            '@financial-times/x-engine': 'xEngine'
+        }
+    };
+
     if (env === 'production') {
-        const prodConfig = {
-            externals: {
-                'o-date': 'oDate',
-                '@financial-times/x-engine': 'xEngine'
-            }
-        };
-        return { ...commonConfig, ...prodConfig };
+        return {...commonConfig, ...prodConfig};
     }
-    return commonConfig;
+    return {...commonConfig, ...devConfig};
 };
 
 module.exports = webpackConfig;

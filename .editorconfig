@@ -1,0 +1,14 @@
+# editorconfig.org
+
+# This is the project's root directory
+root = true
+
+[*]
+# Use Unix line endings
+end_of_line = lf
+# The files are utf-8 encoded
+charset = utf-8
+
+[{Makefile,**.mk}]
+# Use tabs for indentation (Makefiles require tabs)
+indent_style = tab
