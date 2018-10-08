@@ -28,6 +28,3 @@ a11y: demo-build
 	@node .pa11yci.js
 	@PA11Y=true node demos/app
 	@$(DONE)
-
-test: verify unit-test
-	make a11y
