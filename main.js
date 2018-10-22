@@ -1,3 +1,4 @@
+import {magnetInit} from './src/main';
 module.exports = {
-	promoInit: require('./src/index')
+    magnetInit,
 };

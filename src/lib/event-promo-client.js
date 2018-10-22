@@ -1,10 +1,12 @@
-const config = require('../config');
+const config = require('../lib/config');
 
-async function getEventsFromApi (eventConcepts = []) {
+const eventpromoDataSourceUrl = process.env.EVENTPROMO_DATASOURCE_URL || config.get('eventpromoDataSourceUrl');
+
+async function getEventsFromApi (conceptIds = []) {
 	let fetchResponse;
 	try {
-		fetchResponse = await fetch(config.apiPath, {
-			body: JSON.stringify(eventConcepts),
+		fetchResponse = await fetch(eventpromoDataSourceUrl, {
+			body: JSON.stringify(conceptIds),
 			headers: {
 				'accept': 'application/json',
 				'content-type': 'application/json'
@@ -13,7 +15,7 @@ async function getEventsFromApi (eventConcepts = []) {
 		});
 	}
 	catch (err) {
-		throw new Error('failed to fetch eventpromos from enventpromo-api');
+		throw new Error('failed to fetch eventpromos from api');
 	}
 
 	try {
@@ -21,7 +23,7 @@ async function getEventsFromApi (eventConcepts = []) {
 		return jsonResponse;
 	}
 	catch (err) {
-		throw new Error('failed to parse response from enventpromo-api');
+		throw new Error('failed to parse response from eventpromos api');
 	}
 }
 

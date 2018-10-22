@@ -8,3 +8,4 @@ bower_components/
 *.env*
 /.vscode
 /coverage
+package-lock.json
