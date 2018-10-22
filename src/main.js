@@ -1,11 +1,10 @@
-import React from 'react';
 import {getEventsFromApi} from './lib/event-promo-client';
 import {renderEventpromo} from './components/eventpromo/main';
 
 async function loadModule (magnetPlaceholderSelector, magnetData)
 {
     try {
-        if (magnetData.type == 'eventpromo') {
+        if (magnetData.type === 'eventpromo') {
             await renderEventpromo(magnetPlaceholderSelector, magnetData);
         }
     }

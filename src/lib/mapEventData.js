@@ -1,9 +1,9 @@
-const config = require('../config');
+const config = require('../lib/config');
 const {getFormattedDate} = require('./event-date');
 
 function getMappedData (theEvent) {
 	const eventUrl = new URL(theEvent.eventUrl);
-    const images = [theEvent.imageUrl, ...config.animationStaticImages];
+    const images = [theEvent.imageUrl, ...config.get('animationStaticImages')];
 
 	eventUrl.searchParams.set('segmentId', theEvent.segmentId);
 
