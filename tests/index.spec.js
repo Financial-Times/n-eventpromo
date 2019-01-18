@@ -138,7 +138,9 @@ describe('Unit tests: main', () => {
 				fetchMock.post(config.apiPath, liveEvent);
 				eventContainer.innerHTML = eventPromoDataEl;
 
-				expect(await eventPromoInit(document)).toEqual(true);
+                const eventData = await eventPromoInit(document);
+				expect(eventData.id).toEqual(liveEvent.eventpromo.id);
+				expect(eventData.segmentId).toEqual(liveEvent.eventpromo.segmentId);
 			});
 		});
 	});

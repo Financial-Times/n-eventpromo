@@ -38,7 +38,7 @@ async function eventPromoInit (rootEl) {
 	const promoElement = <Eventpromo isPaused={false} {...mappedEvent} />;
     xEngine.render(promoElement, promoSlotSelector);
 
-	return true;
+	return mappedEvent;
 }
 
 export {
