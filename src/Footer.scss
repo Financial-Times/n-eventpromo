@@ -68,7 +68,8 @@
 		content: ' ';
 		width: 70px;
 		height: 60px;
-		background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/specialisttitle-v1:brand-live-ft-logo?source=n-eventpromo');
+		background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/specialisttitle-v1:brand-live-ft-logo-inverse?source=n-eventpromo');
+		margin-left: oSpacingByName('s2');
 	}
 	@include oGridRespondTo($until: S) {
 		align-self: flex-end;
