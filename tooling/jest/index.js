@@ -21,6 +21,6 @@ module.exports = {
 	},
 	setupTestFrameworkScriptFile: './tooling/jest/setup',
 	moduleNameMapper: {
-		'\\.(css|less|scss)$': '<rootDir>/test/__mocks__/styleMock.js'
+		'\\.(css|less|scss)$': '<rootDir>/node_modules/jest-css-modules'
 	}
 };

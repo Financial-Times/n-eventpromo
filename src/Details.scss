@@ -16,8 +16,17 @@
 	flex-flow: column;
 	justify-content: space-between;
 
-	a:hover {
-		color: #c5cbd4;
+	&--ft-bdp-workshop,
+	&--ft-forums {
+		background-color: rgba(18, 165, 179, 0.9);
+	}
+
+	&--ft-bdp-diploma {
+		background-color: rgba(153, 15, 61, 0.9);
+	}
+
+	&--ft-bdp-masterclass {
+		background-color: rgba(108, 89, 153, 0.9);
 	}
 
 	@include oGridRespondTo($until: S) {
@@ -44,13 +53,19 @@
 	}
 }
 .strapline {
-	p {
-		margin: 0;
-	}
 	@include oTypographySans($scale: 2);
 	font-weight: 300;
 	margin-top: 15px;
+
+	p {
+		margin: 0;
+	}
+	&--forum-description {
+		min-height: 100px;
+	}
 }
+
+
 .title {
 	display: inline-block;
 	@include oTypographyDisplay($scale: 5, $weight: 'bold');
@@ -59,15 +74,19 @@
 	border: 0;
 	padding-bottom: 8px;
 
+	&:hover {
+		color: #c5cbd4;
+	}
+
 	@include oGridRespondTo($until: S) {
 		margin-bottom: 0;
 	}
 
 	@include oGridRespondTo($from: M) {
-		@include oTypographyDisplay($scale: 6, $include-font-family: false);
+	@include oTypographyDisplay($scale: 6, $include-font-family: false);
 	}
 
 	@include oGridRespondTo(L, XL) {
-		@include oTypographyDisplay($scale: 5, $include-font-family: false);
+	@include oTypographyDisplay($scale: 5, $include-font-family: false);
 	}
 }
