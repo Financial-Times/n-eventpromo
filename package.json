@@ -48,7 +48,7 @@
   },
   "homepage": "https://github.com/Financial-Times/n-eventpromo",
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "publishConfig": {
     "access": "public"
