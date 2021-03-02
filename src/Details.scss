@@ -53,16 +53,17 @@
 	}
 }
 .strapline {
-	@include oTypographySans($scale: 2);
-	font-weight: 300;
-	margin-top: 15px;
+  @include oTypographySans($scale: 2);
+  font-weight: 300;
+  margin-top: 15px;
 
-	p {
-		margin: 0;
-	}
-	&--forum-description {
-		min-height: 100px;
-	}
+  p {
+	margin: 0;
+  }
+
+  &--forum-promo {
+	min-height: 100px;
+  }
 }
 
 

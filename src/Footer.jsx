@@ -1,16 +1,16 @@
-import xEngine from '@financial-times/x-engine';
-
 import styles from './Footer.scss';
+import {getBranding} from './utils/brands';
 
-const Footer = ({url, ctaText, children}) => {
+const Footer = ({link, ctaText, brand}) => {
+	const {BrandLogo, defaultCtaText} = getBranding(brand);
 	return (
 		<div className={styles['cta-container']}>
 			<div className={styles['btn-block']}>
-				<a href={url} className={styles['btn']} data-trackable="event-promo">
-					{ctaText}
+				<a href={link} className={styles['btn']} data-trackable="event-promo">
+					{ctaText || defaultCtaText}
 				</a>
 			</div>
-			{children}
+			<BrandLogo/>
 		</div>
 	);
 };
