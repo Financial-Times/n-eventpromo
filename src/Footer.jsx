@@ -1,8 +1,8 @@
-import styles from './Footer.scss';
-import {getBranding} from './utils/brands';
+import xEngine from '@financial-times/x-engine';
 
-const Footer = ({link, ctaText, brand}) => {
-	const {BrandLogo, defaultCtaText} = getBranding(brand);
+import styles from './Footer.scss';
+
+const Footer = ({link, ctaText, BrandLogo, defaultCtaText}) => {
 	return (
 		<div className={styles['cta-container']}>
 			<div className={styles['btn-block']}>

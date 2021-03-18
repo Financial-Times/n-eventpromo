@@ -16,19 +16,6 @@
 	flex-flow: column;
 	justify-content: space-between;
 
-	&--ft-bdp-workshop,
-	&--ft-forums {
-		background-color: rgba(18, 165, 179, 0.9);
-	}
-
-	&--ft-bdp-diploma {
-		background-color: rgba(153, 15, 61, 0.9);
-	}
-
-	&--ft-bdp-masterclass {
-		background-color: rgba(108, 89, 153, 0.9);
-	}
-
 	@include oGridRespondTo($until: S) {
 		max-width: 100%;
 		margin-top: -$ep-standard-space * 2;
@@ -52,18 +39,19 @@
 		min-width: 300px;
 	}
 }
+
 .strapline {
-  @include oTypographySans($scale: 2);
-  font-weight: 300;
-  margin-top: 15px;
+	@include oTypographySans($scale: 2);
+	font-weight: 300;
+	margin-top: 15px;
 
-  p {
-	margin: 0;
-  }
+	p {
+		margin: 0;
+	}
 
-  &--forum-promo {
-	min-height: 100px;
-  }
+	&--forum-promo {
+		min-height: 100px;
+	}
 }
 
 

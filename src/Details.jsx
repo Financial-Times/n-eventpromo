@@ -1,25 +1,22 @@
+import xEngine from '@financial-times/x-engine';
+
 import Footer from './Footer';
 import Meta from './Meta';
 import styles from './Details.scss';
 
-const EventDetails = ({link, title, strapline, brand, ...props}) => {
-	const detailStyles = [styles.details];
-
-	if (styles[`details--${brand}`]) {
-		detailStyles.push(styles[`details--${brand}`]);
-	}
+const EventDetails = (props) => {
 	return (
 		<div className={styles.block} aria-labelledby="details-header">
 			<div id="details-header" hidden>
 				Event details and information
 			</div>
-			<div className={detailStyles.join(' ')}>
-				<a href={link} className={styles.title} data-trackable="event-promo">
-					{title}
+			<div className={styles.details} style={{'background-color': props.backgroundColor}}>
+				<a href={props.link} className={styles.title} data-trackable="event-promo">
+					{props.title}
 				</a>
 				<Meta {...props} />
 				<div className={styles.strapline}>
-					<p>{strapline}</p>
+					<p>{props.strapline}</p>
 				</div>
 				<Footer {...props}/>
 			</div>
@@ -27,20 +24,20 @@ const EventDetails = ({link, title, strapline, brand, ...props}) => {
 	);
 };
 
-const ForumDetails = ({title, strapline, link, ...props}) => {
+const ForumDetails = (props) => {
 	return (
 		<div className={styles.block} aria-labelledby="details-header">
 			<div id="details-header" hidden>
 				Forum details and information
 			</div>
-			<div className={styles.details + ' ' + styles['details--ft-forums']}>
-				<a href={link} className={styles.title} data-trackable="event-promo">
-					{title}
+			<div className={styles.details} style={{'background-color': props.backgroundColor}}>
+				<a href={props.link} className={styles.title} data-trackable="event-promo">
+					{props.title}
 				</a>
 				<div className={styles.strapline + ' ' + styles['strapline--forum-promo']}>
-					<p>{strapline}</p>
+					<p>{props.strapline}</p>
 				</div>
-				<Footer {...props} brand='ft-forums'/>
+				<Footer {...props}/>
 			</div>
 		</div>
 	);

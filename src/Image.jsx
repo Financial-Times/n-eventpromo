@@ -1,8 +1,8 @@
-import styles from './Image.scss';
-import {getBranding} from './utils/brands';
+import xEngine from '@financial-times/x-engine';
 
-const Image = ({imageUrl, link, brand}) => {
-	const {defaultImageUrl} = getBranding(brand);
+import styles from './Image.scss';
+
+const Image = ({imageUrl, defaultImageUrl, link}) => {
 	const baseSrc = `https://www.ft.com/__origami/service/image/v2/images/raw/${imageUrl || defaultImageUrl}?source=next&amp;fit=cover&amp;compression=best&amp;`;
 	const imgSrc = `${baseSrc}width=340 340w,${baseSrc}width=400 740w`;
 	return (
