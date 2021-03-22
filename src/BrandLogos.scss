@@ -10,7 +10,6 @@
 	}
 
 	&:after {
-		display: inarticle-block;
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: right;
@@ -36,14 +35,14 @@
 .brand--ft-forums {
 	&:after {
 		background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/specialisttitle-v1:forums-logo-inverse?source=n-eventpromo');
-		width: 104.5px;
+		width: 105px;
 	}
 }
 
-.brand--ft-bdp {
+.brand--ft-board-director-programme {
 	&:after {
 		background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/specialisttitle-v1:board-director-programme-inverse?source=n-eventpromo');
-		width: 100.5px;
+		width: 100px;
 	}
 }
 

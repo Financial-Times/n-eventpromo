@@ -40,6 +40,19 @@
 	}
 }
 
+.details--ft-board-director-programme-workshop,
+.details--ft-forums {
+	background-color: rgba(18, 165, 179, 0.9);
+}
+
+.details--ft-board-director-programme-diploma {
+	background-color: rgba(153, 15, 61, 0.9);
+}
+
+.details--ft-board-director-programme-masterclass {
+	background-color: rgba(108, 89, 153, 0.9);
+}
+
 .strapline {
 	@include oTypographySans($scale: 2);
 	font-weight: 300;
@@ -48,12 +61,11 @@
 	p {
 		margin: 0;
 	}
-
-	&--forum-promo {
-		min-height: 100px;
-	}
 }
 
+.strapline--forum-promo {
+	min-height: 100px;
+}
 
 .title {
 	display: inline-block;
