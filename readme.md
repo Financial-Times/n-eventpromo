@@ -12,7 +12,7 @@ npm install --save @financial-times/n-eventpromo @financial-times/x-engine
 
 This module also requires [`x-engine`][engine] as a peer dependency. The Engine module is used to inject your chosen runtime into the component. Please read the `x-engine` documentation first if you are consuming `x-` components for the first time in your application.
 
-[engine]: https://github.com/Financial-Times/x-dash/tree/master/packages/x-engine
+[engine]: https://github.com/Financial-Times/x-dash/tree/main/packages/x-engine
 
 ## Usage
 
