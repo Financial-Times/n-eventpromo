@@ -5,10 +5,6 @@
 	align-items: center;
 	@include oTypographySans($scale: -2);
 
-	span {
-		padding-right: $ep-half-space;
-	}
-
 	&:after {
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -24,6 +20,10 @@
 	@include oGridRespondTo($until: S) {
 		align-self: flex-end;
 	}
+}
+
+.brand__logo-alt-text {
+	padding-right: $ep-half-space;
 }
 
 .brand--ft-live {

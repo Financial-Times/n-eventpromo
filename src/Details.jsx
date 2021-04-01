@@ -4,12 +4,11 @@ import Footer from './Footer';
 import Meta from './Meta';
 import styles from './Details.scss';
 import commonStyles from './styles/common.scss';
-import detailStyles from './Details.scss';
 
 const EventDetails = (props) => {
 	return (
 		<div className={styles.block} aria-labelledby="details-header">
-			<h2 id="details-header" className={commonStyles['visually-hidden']}>
+			<h2 className={commonStyles['visually-hidden']}>
 				Event details and information
 			</h2>
 			<div className={`${styles.details} ${props.detailsModifierClassname || ''}`}>
@@ -29,7 +28,7 @@ const EventDetails = (props) => {
 const ForumDetails = (props) => {
 	return (
 		<div className={styles.block} aria-labelledby="details-header">
-			<h2 id="details-header" className={commonStyles['visually-hidden']}>
+			<h2 className={commonStyles['visually-hidden']}>
 				Forum details and information
 			</h2>
 			<div className={`${styles.details} ${styles['.details--ft-forums']}`}>
