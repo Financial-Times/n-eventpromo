@@ -37,7 +37,6 @@
 		'theme': 'inverse',
 		'type': 'secondary',
 	));
-	background-color: rgb(60, 63, 69); // rgb(82,82,87);
 
 	@include oGridRespondTo($until: S) {
 		width: 100%;
@@ -46,36 +45,9 @@
 	@include oGridRespondTo($from: S) {
 		@include oTypographySans($scale: 2);
 	}
+
 }
 
 .btn:not([disabled]):hover {
-	background-color: #565c64;
-}
-
-.brand {
-	display: flex;
-	align-items: center;
-	@include oTypographySans($scale: -2);
-	span {
-		padding-right: $ep-half-space;
-	}
-	&:after {
-		display: inarticle-block;
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: right;
-		background-color: transparent;
-		content: ' ';
-		width: 70px;
-		height: 60px;
-		background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/specialisttitle-v1:brand-live-ft-logo-inverse?source=n-eventpromo');
-		margin-left: oSpacingByName('s2');
-	}
-	@include oGridRespondTo($until: S) {
-		align-self: flex-end;
-	}
-}
-
-.visually-hidden {
-	@include oNormaliseVisuallyHidden();
+	background-color: rgba(0, 0, 0, 0.1);
 }

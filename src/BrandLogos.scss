@@ -1,0 +1,52 @@
+@import 'styles/bootstrap';
+
+.brand {
+	display: flex;
+	align-items: center;
+	@include oTypographySans($scale: -2);
+
+	&:after {
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: right;
+		background-color: transparent;
+		content: ' ';
+		width: 70px;
+		height: 60px;
+		margin-left: oSpacingByName('s2');
+	}
+
+
+	@include oGridRespondTo($until: S) {
+		align-self: flex-end;
+	}
+}
+
+.brand__logo-alt-text {
+	padding-right: $ep-half-space;
+}
+
+.brand--ft-live {
+	&:after {
+		background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/specialisttitle-v1:brand-live-ft-logo-inverse?source=n-eventpromo');
+	}
+}
+
+.brand--ft-forums {
+	&:after {
+		background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/specialisttitle-v1:forums-logo-inverse?source=n-eventpromo');
+		width: 105px;
+	}
+}
+
+.brand--ft-board-director-programme {
+	&:after {
+		background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/specialisttitle-v1:board-director-programme-inverse?source=n-eventpromo');
+		width: 100px;
+	}
+}
+
+
+.visually-hidden {
+	@include oNormaliseVisuallyHidden();
+}
