@@ -31,7 +31,7 @@ const ForumDetails = (props) => {
 			<h2 className={commonStyles['visually-hidden']}>
 				Forum details and information
 			</h2>
-			<div className={`${styles.details} ${styles['.details--ft-forums']}`}>
+			<div className={`${styles.details} ${styles['details--ft-forums']}`}>
 				<a href={props.link} className={styles.title} data-trackable="event-promo">
 					{props.title}
 				</a>
