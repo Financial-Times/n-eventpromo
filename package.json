@@ -9,9 +9,6 @@
   "types": "Props.d.ts",
   "scripts": {
     "test": "make test",
-    "precommit": "node_modules/.bin/secret-squirrel",
-    "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg",
-    "prepush": "make verify -j3 && make build",
     "postinstall": "bower install",
     "prepare": "npx snyk protect || npx snyk protect -d || true"
   },
@@ -25,7 +22,7 @@
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
-    "@financial-times/n-gage": "^3.6.0",
+    "@financial-times/n-gage": "^8.3.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "bower": "^1.8.8",
@@ -58,6 +55,13 @@
     "engine": {
       "server": "react",
       "browser": "react"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node_modules/.bin/secret-squirrel-commitmsg",
+      "pre-commit": "node_modules/.bin/secret-squirrel",
+      "pre-push": "make verify -j3 && make build"
     }
   }
 }
