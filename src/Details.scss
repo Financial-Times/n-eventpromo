@@ -11,6 +11,7 @@
 	background-color: rgba(38, 42, 51, 0.9);
 	color: oColorsByName('white');
 	z-index: 5;
+	min-height: 250px;
 	padding: $ep-standard-space;
 	display: flex;
 	flex-flow: column;
@@ -53,6 +54,11 @@
 	background-color: rgba(108, 89, 153, 0.9);
 }
 
+.details--ft-board-director-programme-online-course {
+	color: oColorsByName('slate');
+	background-color: rgba(168, 207, 253, 0.9);
+}
+
 .strapline {
 	@include oTypographySans($scale: 2);
 	font-weight: 300;
@@ -84,10 +90,10 @@
 	}
 
 	@include oGridRespondTo($from: M) {
-	@include oTypographyDisplay($scale: 6, $include-font-family: false);
+		@include oTypographyDisplay($scale: 6, $include-font-family: false);
 	}
 
 	@include oGridRespondTo(L, XL) {
-	@include oTypographyDisplay($scale: 5, $include-font-family: false);
+		@include oTypographyDisplay($scale: 5, $include-font-family: false);
 	}
 }
