@@ -45,7 +45,12 @@
 	@include oGridRespondTo($from: S) {
 		@include oTypographySans($scale: 2);
 	}
+}
 
+.btn--dark,
+.btn--dark:not([disabled]):hover {
+	border-color: oColorsByName('slate');
+	color: oColorsByName('slate');
 }
 
 .btn:not([disabled]):hover {

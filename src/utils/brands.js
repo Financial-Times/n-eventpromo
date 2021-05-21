@@ -1,8 +1,9 @@
-import {BDPLogo, ForumsLogo, FTLiveLogo} from '../BrandLogo';
+import {BDPLogo, BDPLogoDark, ForumsLogo, FTLiveLogo} from '../BrandLogo';
 import detailStyles from '../Details.scss';
 
 const audienceClapping = 'https://www.ft.com/__assets/creatives/better-promo/audiance_clapping.jpg';
 const handShake = 'https://www.ft.com/__assets/creatives/better-promo/hand_shake.jpg';
+const calculator = 'https://www.ft.com/__assets/creatives/better-promo/calculator.jpg';
 
 const BRANDS = {
 	'ft-live': {
@@ -27,6 +28,13 @@ const BRANDS = {
 		defaultCtaText: 'Apply now',
 		defaultImageUrl: audienceClapping,
 		detailsModifierClassname: detailStyles['details--ft-board-director-programme-diploma']
+	},
+	'ft-bdp:online-course': {
+		BrandLogo: BDPLogoDark,
+		defaultCtaText: 'Book now',
+		defaultImageUrl: calculator,
+		detailsModifierClassname: detailStyles['details--ft-board-director-programme-online-course'],
+		darkButton: true
 	},
 	'ft-forums': {
 		BrandLogo: ForumsLogo,

@@ -4,8 +4,8 @@ import styles from './Meta.scss';
 const Meta = ({ location, dates }) => {
 	return (
 		<div className={styles.meta}>
-			<p>{location}</p>
-			<p>{dates}</p>
+			{!!location && <p>{location}</p>}
+			{!!dates && <p>{dates}</p>}
 		</div>
 	);
 };
