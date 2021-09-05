@@ -81,7 +81,8 @@
 	border: 0;
 	padding-bottom: 8px;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		color: #c5cbd4;
 	}
 
