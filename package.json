@@ -52,7 +52,7 @@
   },
   "homepage": "https://github.com/Financial-Times/n-eventpromo",
   "engines": {
-    "node": "12.x",
+    "node": "16.x",
     "npm": "7.x || 8.x"
   },
   "publishConfig": {
