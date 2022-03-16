@@ -41,7 +41,10 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-postcss": "^2.0.0",
     "rollup-plugin-replace": "^2.1.0",
-    "snyk": "^1.167.2"
+    "snyk": "^1.167.2",
+    "stylelint": "^13.7.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.17.1"
   },
   "repository": {
     "type": "git",
@@ -49,7 +52,8 @@
   },
   "homepage": "https://github.com/Financial-Times/n-eventpromo",
   "engines": {
-    "node": "12.x"
+    "node": "12.x",
+    "npm": "7.x || 8.x"
   },
   "publishConfig": {
     "access": "public"
