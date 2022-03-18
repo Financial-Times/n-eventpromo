@@ -12,14 +12,18 @@
     "precommit": "node_modules/.bin/secret-squirrel",
     "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg",
     "prepush": "make verify -j3 && make build",
-    "postinstall": "bower install",
     "prepare": "npx snyk protect || npx snyk protect -d || true"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@financial-times/x-engine": "^1.0.0-beta.5"
+    "@financial-times/x-engine": "^1.0.0-beta.5",
+    "@financial-times/o-buttons": "^6.0.2",
+    "@financial-times/o-colors": "^5.0.2",
+    "@financial-times/o-grid": "^5.0.0",
+    "@financial-times/o-spacing": "^2.0.6",
+    "@financial-times/o-typography": "^6.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -28,7 +32,6 @@
     "@financial-times/n-gage": "^3.6.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
-    "bower": "^1.8.8",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint-plugin-react": "^7.11.1",
