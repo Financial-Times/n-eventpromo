@@ -18,7 +18,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@financial-times/x-engine": "^1.0.0-beta.5",
+    "@financial-times/x-engine": "^1.0.0-beta.5"
+  },
+  "peerDependencies": {
     "@financial-times/o-buttons": "^6.0.2",
     "@financial-times/o-colors": "^5.0.2",
     "@financial-times/o-grid": "^5.0.0",
