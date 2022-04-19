@@ -57,7 +57,7 @@
   },
   "homepage": "https://github.com/Financial-Times/n-eventpromo",
   "engines": {
-    "node": "12.x",
+    "node": "16.x",
     "npm": "7.x || 8.x"
   },
   "publishConfig": {
@@ -68,5 +68,9 @@
       "server": "react",
       "browser": "react"
     }
+  },
+  "volta": {
+    "node": "16.14.2",
+    "npm": "7.20.2"
   }
 }
