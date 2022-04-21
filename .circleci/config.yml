@@ -12,11 +12,6 @@ references:
         default: "16.14"
         type: string
 
-  container_config_lambda_node14: &container_config_lambda_node14
-    working_directory: ~/project/build
-    docker:
-      - image: amazon/aws-lambda-nodejs:14
-
   workspace_root: &workspace_root
     ~/project
 
