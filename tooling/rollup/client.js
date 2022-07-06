@@ -9,7 +9,7 @@ const external = Object.keys(pkg.dependencies || {});
 module.exports = {
 	input: 'src/Eventpromo.jsx',
 	output: {
-		file: pkg.browser,
+		file: pkg.main,
 		format: 'cjs'
 	},
 	plugins: [
