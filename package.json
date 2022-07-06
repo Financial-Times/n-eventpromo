@@ -3,8 +3,6 @@
   "version": "0.0.0",
   "description": "Promote content from live.ft.com",
   "main": "dist/Eventpromo.cjs.js",
-  "module": "dist/Eventpromo.esm.js",
-  "browser": "dist/Eventpromo.es5.js",
   "style": "dist/Eventpromo.css",
   "types": "Props.d.ts",
   "scripts": {
