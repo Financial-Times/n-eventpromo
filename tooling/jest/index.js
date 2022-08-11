@@ -9,7 +9,6 @@ module.exports = {
 	],
 	testPathIgnorePatterns: [
 		'./node_modules/',
-		'./bower_components/'
 	],
 	testEnvironment: 'jsdom', // Is default value, but here for clarity/explicitness
 	testEnvironmentOptions: {
@@ -17,9 +16,9 @@ module.exports = {
 		referrer: 'https://example.com/referring-path',
 	},
 	transform: {
-		'^.+\\.jsx?$': './tooling/babel/jest'
+		'^.+\\.jsx?$': '<rootDir>/tooling/babel/jest.js'
 	},
-	setupTestFrameworkScriptFile: './tooling/jest/setup',
+	setupFilesAfterEnv: ['<rootDir>/tooling/jest/setup.js'],
 	moduleNameMapper: {
 		'\\.(css|less|scss)$': '<rootDir>/node_modules/jest-css-modules'
 	}

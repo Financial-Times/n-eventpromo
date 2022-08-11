@@ -1,0 +1,9 @@
+plugins:
+  - '@dotcom-tool-kit/circleci'
+  - '@dotcom-tool-kit/npm'
+  - '@dotcom-tool-kit/circleci-npm'
+  - '@dotcom-tool-kit/jest'
+hooks: {}
+options: 
+  '@dotcom-tool-kit/jest':
+    configPath: './tooling/jest/index.js'

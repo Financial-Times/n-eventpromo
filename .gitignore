@@ -1,8 +1,6 @@
 node_modules
-bower_components
 *.env*
 test_build
-package-lock.json
 tmp
 public
 .editorconfig
@@ -10,3 +8,4 @@ public
 .stylelintrc
 .pa11yci.js
 dist
+.vscode
