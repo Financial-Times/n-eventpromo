@@ -13,7 +13,7 @@ module.exports = babelJest.createTransformer({
 		[
 			'@babel/preset-react',
 			{
-				'pragma': 'xEngine.h'
+				pragma: 'xEngine.h'
 			}
 		]
 	]

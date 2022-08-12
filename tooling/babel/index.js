@@ -16,7 +16,7 @@ exports.client = {
 				pragma: 'xEngine.h'
 			}
 		]
-	],
+	]
 };
 
 exports.server = {
@@ -33,7 +33,7 @@ exports.server = {
 		[
 			'@babel/preset-react',
 			{
-				'pragma': 'xEngine.h'
+				pragma: 'xEngine.h'
 			}
 		]
 	]

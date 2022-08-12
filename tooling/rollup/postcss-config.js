@@ -8,7 +8,10 @@ module.exports = (style) => {
 			[
 				'sass',
 				{
-					includePaths: [path.resolve(process.cwd(), 'node_modules'), path.resolve(process.cwd(), 'node_modules/@financial-times')]
+					includePaths: [
+						path.resolve(process.cwd(), 'node_modules'),
+						path.resolve(process.cwd(), 'node_modules/@financial-times')
+					]
 				}
 			],
 			'stylus',

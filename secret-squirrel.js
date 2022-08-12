@@ -1,8 +1,6 @@
 module.exports = {
 	files: {
-		allow: [
-			'.npmrc'
-		],
+		allow: ['.npmrc'],
 		allowOverrides: []
 	},
 	strings: {

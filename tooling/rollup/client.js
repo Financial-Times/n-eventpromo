@@ -15,17 +15,11 @@ module.exports = {
 	plugins: [
 		postcss(postcssConfig(pkg.style)),
 		resolve({
-			extensions: [
-				'.mjs',
-				'.js',
-				'.json',
-				'.node',
-				'.jsx'
-			]
+			extensions: ['.mjs', '.js', '.json', '.node', '.jsx']
 		}),
 		babel(require('../babel').client),
 		replace({
-			'_ROLLUP_REPLACE_ENVIRONMENT_': 'client'
+			_ROLLUP_REPLACE_ENVIRONMENT_: 'client'
 		})
 	],
 	external
