@@ -1,6 +1,9 @@
 module.exports = {
 	files: {
-		allow: ['.npmrc'],
+		allow: [
+			'.husky/pre-commit',
+			'.husky/pre-push'
+		],
 		allowOverrides: []
 	},
 	strings: {
