@@ -16,7 +16,9 @@
 		"start": "dotcom-tool-kit run:local",
 		"fix:js": "eslint --fix '**/*.{js,json,yml}'",
 		"fix": "npm run fix:js",
-		"format": "dotcom-tool-kit format:local"
+		"format": "dotcom-tool-kit format:local",
+		"unit-test": "npx jest -c tooling/jest/index.js",
+		"build-project": "npx rollup -c tooling/rollup/index.js"
 	},
 	"keywords": [],
 	"author": "",

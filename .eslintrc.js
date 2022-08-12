@@ -1,5 +1,5 @@
 module.exports = {
-	ignorePatterns: ['package.json', 'package-lock.json', 'node_modules/**/*', 'CODEOWNERS', '.nyc_output'],
+	ignorePatterns: ['package.json', 'package-lock.json', 'node_modules/**/*', 'CODEOWNERS', '.nyc_output', 'dist/**/*'],
 	extends: [
 		'@financial-times/eslint-config-next',
 		'plugin:json/recommended',
