@@ -4,8 +4,6 @@ test_build
 tmp
 public
 .editorconfig
-.eslintrc.js
-.stylelintrc
 .pa11yci.js
 dist
 .vscode
