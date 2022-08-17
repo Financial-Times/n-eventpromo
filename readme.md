@@ -59,8 +59,8 @@ Property             | Type         | Default   | Notes
 ```sh
 git clone git@github.com:Financial-Times/n-eventpromo.git
 cd n-eventpromo
-make install
-make build
+npm install
+npm run build-project
 ```
 
 ### Linking to an application
@@ -72,14 +72,14 @@ Complete the installation for `n-magnet` locally then link `n-eventpromo` by run
 ```sh
 cd ../n-magnet
 npm link ../n-eventpromo
-make build && make demo
+npm run build-dev && npm run demo
 ```
 
 When making changes after first linking `n-eventpromo` run:
 
 ```sh
 # in ./n-eventpromo
-make build
+npm run build-project
 # in ./n-magnet
-make build && make demo
+npm run build-dev && npm run demo
 ```

@@ -1,7 +1,7 @@
-const resolve = require('rollup-plugin-node-resolve');
-const babel = require('rollup-plugin-babel');
+const resolve = require('@rollup/plugin-node-resolve').default;
+const babel = require('@rollup/plugin-babel');
 const postcss = require('rollup-plugin-postcss');
-const replace = require('rollup-plugin-replace');
+const replace = require('@rollup/plugin-replace');
 const postcssConfig = require('./postcss-config');
 const pkg = require('../../package');
 const external = Object.keys(pkg.dependencies || {});
@@ -15,17 +15,11 @@ module.exports = {
 	plugins: [
 		postcss(postcssConfig(pkg.style)),
 		resolve({
-			extensions: [
-				'.mjs',
-				'.js',
-				'.json',
-				'.node',
-				'.jsx'
-			]
+			extensions: ['.mjs', '.js', '.json', '.node', '.jsx']
 		}),
-		babel(require('../babel').client),
+		babel.babel(require('../babel').client),
 		replace({
-			'_ROLLUP_REPLACE_ENVIRONMENT_': 'client'
+			_ROLLUP_REPLACE_ENVIRONMENT_: 'client'
 		})
 	],
 	external

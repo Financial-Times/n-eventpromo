@@ -1,0 +1,22 @@
+plugins:
+  - '@dotcom-tool-kit/circleci'
+  - '@dotcom-tool-kit/npm'
+  - '@dotcom-tool-kit/circleci-npm'
+  - '@dotcom-tool-kit/jest'
+  - '@dotcom-tool-kit/eslint'
+  - '@dotcom-tool-kit/prettier'
+  - './toolkit/rollup'
+hooks:
+  test:local:
+    - Eslint
+    - JestLocal
+  test:ci:
+    - Eslint
+    - JestCI
+options: 
+  '@dotcom-tool-kit/jest':
+    configPath: './tooling/jest/index.js'
+  '@dotcom-tool-kit/eslint':
+    files: '**/*.{js,yml,json}'
+  '@dotcom-tool-kit/prettier':
+    files: '**/*.{js,yml,json}'

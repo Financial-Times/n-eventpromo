@@ -1,0 +1,3 @@
+hooks:
+  'build:local': Rollup
+  'build:ci': Rollup
