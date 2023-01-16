@@ -7,7 +7,7 @@ import commonStyles from './styles/common.scss';
 
 const EventDetails = (props) => {
 	return (
-		<div className={styles.block} aria-labelledby="details-header">
+		<div className={styles.block}>
 			<h2 className={commonStyles['visually-hidden']}>
 				Event details and information
 			</h2>
@@ -27,7 +27,7 @@ const EventDetails = (props) => {
 
 const ForumDetails = (props) => {
 	return (
-		<div className={styles.block} aria-labelledby="details-header">
+		<div className={styles.block}>
 			<h2 className={commonStyles['visually-hidden']}>
 				Forum details and information
 			</h2>
