@@ -79,7 +79,7 @@
 	},
 	"homepage": "https://github.com/Financial-Times/n-eventpromo",
 	"engines": {
-		"node": "16.x",
+		"node": "18.x",
 		"npm": "7.x || 8.x"
 	},
 	"publishConfig": {
