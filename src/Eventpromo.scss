@@ -2,7 +2,7 @@
 
 .eventpromo {
 	max-width: 700px;
-	margin-bottom: 50px;
+	margin-bottom: 32px;
 	margin-top: 30px;
 	display: flex;
 	position: relative;
@@ -15,5 +15,22 @@
 
 	@include oGridRespondTo($from: L, $until: XL) {
 		width: 540px;
+	}
+}
+
+.eventpromo__btn__container {
+	max-width: 700px;
+	text-align: center;
+	margin-bottom: 48px;
+}
+
+.explore__btn {
+	@include oButtonsContent($opts: (
+		'size': 'big',
+		'type': 'secondary',
+	));
+
+	@include oGridRespondTo($from: S) {
+		@include oTypographySans($scale: 0);
 	}
 }

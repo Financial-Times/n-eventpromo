@@ -18,9 +18,9 @@ describe('Component: Eventpromo', () => {
         ['ft-bdp:diploma', getBranding('ft-bdp:diploma')],
         ['ft-bdp:masterclass', getBranding('ft-bdp:masterclass')]
     ])('when the brand prop is \'%s\'', (brand, brandConfig) => {
-        let details, image;
+        let details; let image;
         beforeAll(() => {
-            [details, image] = shallow(<Eventpromo {...eventpromoFixture} brand={brand}/>).children().getElements()
+            [details, image] = shallow(<Eventpromo {...eventpromoFixture} brand={brand}/>).children().first().children().getElements();
         })
         test.each(Object.entries(brandConfig))('it should pass the brand config %s as a prop to the details', (key, value) => {
             expect(details.props).toHaveProperty(key, value)
