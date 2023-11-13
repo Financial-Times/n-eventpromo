@@ -41,7 +41,7 @@
 		"@dotcom-tool-kit/circleci-npm": "^5.2.8",
 		"@dotcom-tool-kit/eslint": "^3.1.5",
 		"@dotcom-tool-kit/jest": "^3.2.2",
-		"@dotcom-tool-kit/npm": "^3.2.1",
+		"@dotcom-tool-kit/npm": "^3.2.2",
 		"@dotcom-tool-kit/prettier": "^3.1.5",
 		"@financial-times/eslint-config-next": "^5.0.0",
 		"@financial-times/secret-squirrel": "^2.21.0",
