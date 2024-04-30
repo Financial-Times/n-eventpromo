@@ -1,13 +1,14 @@
 import {Eventpromo} from '../src/Eventpromo';
-import {shallow} from 'enzyme';
+import {render, screen} from '@testing-library/react'
 
 import eventpromoFixture from './fixtures/eventpromoFixture';
 import {getBranding} from '../src/utils/brands';
 
 describe('Component: Eventpromo', () => {
     test('it should set the eventpromo id', () => {
-        const promoElement = <Eventpromo isPaused={true} {...eventpromoFixture} />;
-        expect(shallow(promoElement).prop('data-focus-concept')).toEqual(eventpromoFixture.id)
+        render(<Eventpromo isPaused={true} {...eventpromoFixture} />);
+        const elem = screen.getByTestId('eventpromo');
+        expect(elem).toHaveAttribute('data-focus-concept', eventpromoFixture.id)
     });
 
     describe.each([
@@ -18,16 +19,17 @@ describe('Component: Eventpromo', () => {
         ['ft-bdp:diploma', getBranding('ft-bdp:diploma')],
         ['ft-bdp:masterclass', getBranding('ft-bdp:masterclass')]
     ])('when the brand prop is \'%s\'', (brand, brandConfig) => {
-        let details; let image;
-        beforeAll(() => {
-            [details, image] = shallow(<Eventpromo {...eventpromoFixture} brand={brand}/>).children().first().children().getElements();
-        })
-        test.each(Object.entries(brandConfig))('it should pass the brand config %s as a prop to the details', (key, value) => {
-            expect(details.props).toHaveProperty(key, value)
+        test('it should output the right brand information from the config', () => {
+            render(<Eventpromo {...eventpromoFixture} brand={brand}/>)
+            const elem = screen.getByTestId('eventpromo');
+            expect(elem).toHaveTextContent(brandConfig.defaultCtaText)
         })
 
-        test.each(Object.entries(brandConfig))('it should pass the brand config %s as a prop to the image', (key, value) => {
-            expect(image.props).toHaveProperty(key, value)
+        test('it should show the right image for the brand', () => {
+            render(<Eventpromo {...eventpromoFixture} brand={brand}/>)
+            const elem = screen.getByTestId('promoimage');
+            const srcSet = elem.getAttribute('srcSet')
+            expect(srcSet.includes(brandConfig.defaultImageUrl)).toEqual(true)
         })
     })
 });
