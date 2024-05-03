@@ -4,9 +4,7 @@ exports.client = {
 		[
 			'@babel/preset-env',
 			{
-				targets: {
-					ie: '11'
-				},
+				targets: 'last 1 version or > 1%, not dead',
 				exclude: ['transform-regenerator', 'transform-async-to-generator']
 			}
 		],
@@ -26,7 +24,7 @@ exports.server = {
 			'@babel/preset-env',
 			{
 				targets: {
-					node: 12
+					node: 18
 				}
 			}
 		],

@@ -6,7 +6,7 @@ This module is used by [n-magnet](https://github.com/Financial-Times/n-magnet).
 
 ## Installation
 
-This module is compatible with Node 12+ and is distributed on npm.
+This module is compatible with Node 18+ and is distributed on npm.
 
 ```bash
 npm install --save @financial-times/n-eventpromo @financial-times/x-engine
@@ -72,7 +72,7 @@ Complete the installation for `n-magnet` locally then link `n-eventpromo` by run
 ```sh
 cd ../n-magnet
 npm link ../n-eventpromo
-npm run build-dev && npm run demo
+npm run build && npm run start
 ```
 
 When making changes after first linking `n-eventpromo` run:
@@ -81,5 +81,5 @@ When making changes after first linking `n-eventpromo` run:
 # in ./n-eventpromo
 npm run build-project
 # in ./n-magnet
-npm run build-dev && npm run demo
+npm run build && npm run start
 ```

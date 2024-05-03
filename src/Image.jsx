@@ -12,6 +12,7 @@ const Image = ({imageUrl, defaultImageUrl, link}) => {
 				srcSet={imgSrc}
 				alt=""
 				sizes="(max-width: 46.24em) 100vw, 45vw"
+				data-testid="promoimage"
 			/>
 		</a>
 	);

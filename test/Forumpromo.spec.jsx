@@ -1,11 +1,12 @@
 import {Forumpromo} from '../src/Eventpromo';
-import {shallow} from 'enzyme';
+import {render, screen} from '@testing-library/react'
 
 import forumpromoFixture from './fixtures/forumpromoFixture';
 
 describe('Component: Eventpromo', () => {
     test('it should set the eventpromo id', () => {
-        const promoElement = <Forumpromo {...forumpromoFixture} />;
-        expect(shallow(promoElement).prop('data-forum-id')).toEqual(forumpromoFixture.id)
+        render(<Forumpromo {...forumpromoFixture} />);
+        const elem = screen.getByTestId('forumpromo');
+        expect(elem).toHaveAttribute('data-forum-id', forumpromoFixture.id);
     });
 });
