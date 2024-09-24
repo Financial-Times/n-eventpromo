@@ -11,7 +11,7 @@
 		"test": "dotcom-tool-kit test:local",
 		"precommit": "secret-squirrel && npm run format && npm run fix",
 		"prepush": "npm run test",
-		"prepare": "npx snyk protect || npx snyk protect -d || true && husky install",
+		"prepare": "husky install",
 		"build": "dotcom-tool-kit build:local",
 		"start": "dotcom-tool-kit run:local",
 		"fix:js": "eslint --fix '**/*.{js,json,yml}'",
@@ -69,7 +69,6 @@
 		"rollup-plugin-postcss": "^2.9.0",
 		"rollup-plugin-replace": "^2.1.0",
 		"sass": "^1.50.1",
-		"snyk": "^1.167.2",
 		"stylelint": "^13.7.0",
 		"stylelint-order": "^4.0.0",
 		"stylelint-scss": "^3.17.1"
